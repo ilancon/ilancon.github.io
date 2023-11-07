@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melissa's Premium Pizzeria</title>
+    <script src="ex1.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .redtop {
+            background-color: rgb(255, 106, 106);
+        }
+        .footer {
+            background-color: rgb(153, 255, 106);
+        }
+        body {
+            background-color: rgb(255, 238, 160);
+        }
+        .rec {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row redtop">
+            <div class="col">
+                <h1>Melissa's Premium Pizzeria</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Size:</h3>
+                <input type="radio" name="size" id="small" value="Small"> Small<br>
+                <input type="radio" name="size" id="medium" value="Medium"> Medium<br>
+                <input type="radio" name="size" id="large" value="Large"> Large<br>
+                <input type="radio" name="size" id="x-large" value="Extra-Large"> Extra-Large<br>
+            </div>
+            <div class="col">
+                <h3>Toppings:</h3>
+                <input type="checkbox" name="toppings" id="pepperoni" value="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="toppings" id="sausage" value="Sausage"> Sausage<br>
+                <input type="checkbox" name="toppings" id="cheese" value="Cheese"> Cheese<br>
+                <input type="checkbox" name="toppings" id="mushrooms" value="Mushrooms"> Mushrooms<br>
+                <input type="checkbox" name="toppings" id="olives" value="O lives"> Olives<br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Drinks:</h3>
+                <div class="row">
+                    <div class="col">
+                        <p>Soda Can ($1.00 per):</p>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="drinks" id="sodacan" value="0" min="0" max="10"
+                            class="form-control w-25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Soda 20z ($1.50 per):</p>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="drinks" id="soda20z" value="0" min="0" max="10"
+                            class="form-control w-25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Soda 2L ($5.00 per):</p>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="drinks" id="soda2l" value="0" min="0" max="10"
+                            class="form-control w-25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Orange Juice ($1.00 per):</p>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="drinks" id="orange" value="0" min="0" max="10"
+                            class="form-control w-25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Water 20z ($0.75 per):</p>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="drinks" id="water20z" value="0" min="0" max="10"
+                            class="form-control w-25">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Receipt:</h3>
+                <div class="border fs-5 rec" id="receipt" hidden></div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" onclick="sendOrder()">Send Order</button>
+            <button class="btn btn-warning" onclick="newOrder()">New Order</button>
+        </div>
+    </div>
+    <footer class="footer fixed-bottom">
+        <div class="text-center fw-semibold">Melissa's Premium Pizzeria - &copy; Copyright 2023</div>
+    </footer>
+</body>
+
+</html>
